@@ -59,3 +59,30 @@ $(function() {
       return i;
   }
 });
+
+$(document).ready(function(){
+
+  $(".about-link").click(function(e){
+
+    var text = $(".about-text");
+    centerImage(text);
+
+    $('.about').show();
+
+    $(".about").click(function(){
+      $(".about").hide();
+    });
+
+  });
+
+  function centerImage(text) {
+
+    text.load(function(){
+      var page_height = $(window).height();
+      var text_height = text.height();
+      var text_height_offset = ( page_height - text_height ) / 2;
+      text.parent().css("margin-top", text_height_offset);
+    });
+  }
+
+});
