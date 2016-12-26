@@ -292,7 +292,7 @@ body.about-active {
   border: 3px solid white;
 }
 
-.about-active .time, .about-active .footer__time {
+.about-active .time, .about-active .footer__time, .about-active #warped {
   visibility: hidden;
   opacity:0;
   -moz-transition: all 0.3s ease-in;
@@ -531,10 +531,12 @@ body.about-active {
   margin-top: 80px !important;
 }
 
+
  #warped {
   position: relative;
   display: block;
   z-index: 2;
+  visibility: visible;
 }
 
    #warped>span[class^=w]:nth-of-type(n+0){display:block; position:absolute;
