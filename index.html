@@ -24,13 +24,14 @@
       </div>
     </div>
 
-      <div class="row">
+      <div class="row main-section">
         <div class="large-12 large-centered medium-12 medium-centered small-12 small-centered columns">
 
               <div id="warped">
                      <span class='w0'> </span><span class='w1'> </span><span class='w2'> </span><span class='w3'> </span><span class='w4'> </span><span class='w5'>N</span><span class='w6'>e</span><span class='w7'>w</span><span class='w8'> </span><span class='w9'>w</span><span class='w10'>o</span><span class='w11'>r</span><span class='w12'>k</span><span class='w13'> </span><span class='w14'>c</span><span class='w15'>o</span><span class='w16'>m</span><span class='w17'>i</span><span class='w18'>n</span><span class='w19'>g</span><span class='w20'> </span><span class='w21'>s</span><span class='w22'>o</span><span class='w23'>o</span><span class='w24'>n</span><span class='w25'>.</span>
               </div>
 
+<div class="portfolio">
     <section class="single-item slider">
       <div><img src="./assets/image1.jpg"></div>
       <div><img src="./assets/image2.jpg"></div>
@@ -43,7 +44,13 @@
       <div><img src="./assets/image9.jpg"></div>
     </section>
 
-    <div class="section time">
+      <div class="slide-count">
+         <span class="current"></span> /
+         <span class="total">9</span>
+      </div>
+</div>
+
+    <div class="time">
 <!--       <p class="text-one show-for-desktop">Unfortunately, the clock is ticking, the hours</p>
       <p class="text-two show-for-desktop">are going by. The past increase</p>
       <p class="text-three show-for-desktop">s, the future receeds. Possibilities decreas</p>
@@ -76,10 +83,14 @@
 
     <div class="section about">
       <div class="about-centered">
+          <div class="close-about">
+            <img src="assets/Close.svg" onmouseover="this.src='assets/Close-Hover.svg'"
+            onmouseout="this.src='assets/Close.svg'"/>
+          </div>
         <div class="about-text">
 
           <div class="column">
-            <p>Andrew McQuiston is a designer working in identity, print, and web design. In May 2011 he recieved a BFA in Graphic Design from the <span class="big-link"><a href="http://www.uarts.edu/">University of the Arts</a></span> with a concentration in Book Arts & Printmaking.Currently based in Philadelphia, Andrew works as a UI designer for <span class="big-link"><a href="http://www.urbanoutfitters.com/urban/index.jsp">Urban Outfitters</a></span>. Please email regarding freelance or work inquiries.</p>
+            <p>Andrew McQuiston is a designer working in identity, print, and web design. In May 2011 he recieved a BFA in Graphic Design from the <span class="big-link"><a href="http://www.uarts.edu/">University of the Arts</a></span> with a concentration in Book Arts & Printmaking. Currently based in Philadelphia, Andrew works as a UI designer for <span class="big-link"><a href="http://www.urbanoutfitters.com/urban/index.jsp">Urban Outfitters</a></span>. Please email regarding freelance or work inquiries.</p>
           </div>
 
         <div class="connect">
@@ -116,15 +127,45 @@
 <!--     // <script src="js/jquery.lettering-0.6.1.min.js"></script> -->
     <script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
+
     $(document).on('ready', function() {
-      $(".single-item").slick({
+
+      var $gallery = $('.single-item');
+      var slideCount = null;
+
+      $gallery.slick({
         autoplay: true,
         infinite: true,
         fade: true,
         slidesToShow: 1,
         slidesToScroll: 1
       });
-    });
+
+
+      $gallery.on('init', function(event, slick){
+        slideCount = slick.slideCount;
+        setSlideCount();
+        setCurrentSlideNumber(slick.currentSlide);
+      });
+
+      $gallery.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        setCurrentSlideNumber(nextSlide);
+      });
+
+      function setSlideCount() {
+        var $el = $('.slide-count').find('.total');
+        $el.text(slideCount);
+      }
+
+      function setCurrentSlideNumber(currentSlide) {
+        var $el = $('.slide-count').find('.current');
+        $el.text(currentSlide + 1);
+          if (currentSlide === null || 0 || undefined) {
+            $el.text(1);
+          }
+      }
+
+   });
   </script>
   </body>
 </html>

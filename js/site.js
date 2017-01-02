@@ -12,16 +12,16 @@ $(function() {
   //   $('.quote-block').toggle();
   // });
 
-  $('.about-link').click(function() {
-    $('body').addClass('about-active');
-    $('.home-link').addClass('close');
-  });
+  // $('.about-link').click(function() {
+  //   $('body').addClass('about-active');
+  //   $('.home-link').addClass('close');
+  // });
 
-  $('.home-link').click(function(e) {
-    e.preventDefault();
-    $(this).removeClass('close');
-    $('body').removeClass('about-active');
-  });
+  // $('.home-link').click(function(e) {
+  //   e.preventDefault();
+  //   $(this).removeClass('close');
+  //   $('body').removeClass('about-active');
+  // });
 
   function startTime() {
     // var today=new Date();
@@ -63,13 +63,14 @@ $(function() {
 $(document).ready(function(){
 
   $(".about-link").click(function(e){
-
+    $('body').addClass('about-active');
     var text = $(".about-text");
     centerImage(text);
 
     $('.about').show();
 
     $(".about").click(function(){
+      $('body').removeClass('about-active');
       $(".about").hide();
     });
 
