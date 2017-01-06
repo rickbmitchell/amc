@@ -6,7 +6,7 @@ body {
 }
 
 .wrapper {
-  margin: 50px;
+  margin: 40px 50px 50px 50px;
 }
 
 a {
@@ -52,7 +52,7 @@ a {
   font-size: 14px;
   font-weight: bold;
   list-style-type: none;
-  margin-top: -3%;
+  margin-top: -4.2%;
 }
 
 .header__nav li { display: inline; }
@@ -62,7 +62,9 @@ a {
 }
 
 .header__nav a:hover {
-  border-bottom: 3px solid black;
+  color: #4068FC !important;
+  border-bottom: 2px solid #4068FC;
+  padding-bottom: 3px;
 }
 
 .section {
@@ -180,7 +182,7 @@ p.text-ten {
 .footer .footer__time {
   float: left;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   -ms-transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
@@ -276,6 +278,7 @@ p.text-ten {
 
 .close-about img:hover {
    background-image: url('assets/Close-Hover.svg');
+   cursor: pointer;
 }
 
 body.about-active {
@@ -479,11 +482,11 @@ body.about-active {
 
 .connect a {
   border-bottom: 1px solid #a5a5a5;
-  padding-bottom: 5px;
+  padding-bottom: 3px;
 }
 
 .connect a:hover {
-  color: #4068FC;
+  color: #4068FC !important;
   border-bottom: 2px solid #4068FC;
 }
 
@@ -499,6 +502,7 @@ body.about-active {
 
 .big-link a:hover {
   border-bottom: 2px solid #4068FC;
+  color: #4068FC !important;
 }
 
 /*.copyright {
@@ -558,6 +562,10 @@ body.about-active {
   margin-right: 1%;
   position: relative;
   display: block;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: black !important;
 }
 
 #warped {
@@ -691,7 +699,7 @@ body.about-active {
 
   .slide-count {
     padding-top: 575px;
-    margin-right: 12%;
+    margin-right: 11.5%;
   }
 
 }
@@ -718,6 +726,35 @@ body.about-active {
 
 }
 
+@media screen and (min-width: 1024px) {
+  .slick-prev {
+    left: -75px !important;
+    top: 300px !important;
+    width: 100px !important;
+  }
+
+  .slick-next {
+    right: -75px !important;
+    top: 300px !important;
+    width: 100px !important;
+  }
+}
+
+
+@media screen and (min-width: 40em) and (max-width: 1023px) {
+  .slick-prev {
+    left: -75px !important;
+    top: 210px !important;
+    width: 100px !important;
+  }
+
+  .slick-next {
+    right: -75px !important;
+    top: 210px !important;
+    width: 100px !important;
+  }
+}
+
 @media screen and (max-width: 39.9375em) {
   .titular p{
     font-size: 28px;
@@ -729,7 +766,7 @@ body.about-active {
   }
 
   .main-section {
-    margin-top: -60px;
+    margin-top: -80px;
   }
 
   .footer {
@@ -753,6 +790,14 @@ body.about-active {
 
   .column p, .big-link {
     font-size: 14px;
+  }
+
+  .slick-prev {
+    top: 85px !important;
+  }
+
+  .slick-next {
+    top: 85px !important;
   }
 
 /*  body {
