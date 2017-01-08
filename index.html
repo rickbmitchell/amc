@@ -28,7 +28,7 @@
         <div class="large-12 large-centered medium-12 medium-centered small-12 small-centered columns">
 
               <div id="warped">
-                     <span class='w0'> </span><span class='w1'> </span><span class='w2'> </span><span class='w3'> </span><span class='w4'> </span><span class='w5'>N</span><span class='w6'>e</span><span class='w7'>w</span><span class='w8'> </span><span class='w9'>w</span><span class='w10'>o</span><span class='w11'>r</span><span class='w12'>k</span><span class='w13'> </span><span class='w14'>c</span><span class='w15'>o</span><span class='w16'>m</span><span class='w17'>i</span><span class='w18'>n</span><span class='w19'>g</span><span class='w20'> </span><span class='w21'>s</span><span class='w22'>o</span><span class='w23'>o</span><span class='w24'>n</span><span class='w25'>.</span>
+                     <span class='w0'> </span><span class='w1'> </span><span class='w2'> </span><span class='w3'> </span><span class='w4'> </span><span class='w5'> </span><span class='w6'> </span><span class='w7'> </span><span class='w8'> </span><span class='w9'> </span><span class='w10'> </span><span class='w11'> </span><span class='w12'> </span><span class='w13'> </span><span class='w14'> </span><span class='w15'> </span><span class='w16'> </span><span class='w17'> </span><span class='w18'> </span><span class='w19'> </span><span class='w20'> </span><span class='w21'> </span><span class='w22'> </span><span class='w23'> </span><span class='w24'> </span><span class='w25'> </span><span class='w26'> </span><span class='w27'> </span><span class='w28'> </span><span class='w29'> </span><span class='w30'>N</span><span class='w31'>e</span><span class='w32'>w</span><span class='w33'> </span><span class='w34'>w</span><span class='w35'>o</span><span class='w36'>r</span><span class='w37'>k</span><span class='w38'> </span><span class='w39'>c</span><span class='w40'>o</span><span class='w41'>m</span><span class='w42'>i</span><span class='w43'>n</span><span class='w44'>g</span><span class='w45'> </span><span class='w46'>s</span><span class='w47'>o</span><span class='w48'>o</span><span class='w49'>n</span><span class='w50'>.</span>
               </div>
 
 <div class="portfolio">
@@ -43,11 +43,12 @@
       <div><img src="./assets/image8.jpg"></div>
       <div><img src="./assets/image9.jpg"></div>
     </section>
-
+<!--     <div class="count-container"> -->
       <div class="slide-count">
          <span class="current"></span> /
          <span class="total">9</span>
       </div>
+<!--     </div> -->
 </div>
 
     <div class="time">
@@ -138,10 +139,33 @@
         infinite: true,
         fade: true,
         slidesToShow: 1,
-        slidesToScroll: 1,
-        prevArrow:"<img class='a-left control-c prev slick-prev' src='assets/Left_Arrow.svg'>",
-        nextArrow:"<img class='a-right control-c next slick-next' src='assets/Right_Arrow.svg'>"
+        slidesToScroll: 1
+        // prevArrow:"<img class='a-left control-c prev slick-prev' src='assets/Left_Arrow.svg'>",
+        // nextArrow:"<img class='a-right control-c next slick-next' src='assets/Right_Arrow.svg'>"
       });
+
+    //   $('.portfolio').on('mouseover', function (e) {
+    // if (e.clientY < $('.portfolio').height() / 2) {
+    //     $('.portfolio').show('.slick-prev')
+    // } else {
+    //     $('.portfolio').show('.slick-next')
+    // }
+    // });
+
+      // $gallery.on('mousemove', function(event) {
+      //  var mouseSide;
+      // if ((event.pageX - this.offsetLeft) < $(this).width() / 2) {
+      //   mouseSide = $('.slick-prev');
+      // } else {
+      //   mouseSide = $('.slick-next');
+      // };
+
+      // $gallery.append(mouseSide).css('text-align',( mouseSide=='.slick-prev')?'left':'right');
+      // }).on('mouseout', function(){
+      // $gallery.append('');
+
+      // });
+
 
       $gallery.on('init', function(event, slick){
         slideCount = slick.slideCount;
