@@ -6,7 +6,7 @@ body {
 }
 
 .wrapper {
-  margin: 40px 50px 50px 50px;
+  margin: 30px 50px 50px 50px;
 }
 
 a {
@@ -74,7 +74,7 @@ a {
 }
 
 .main-section {
-  margin-top: -32px;
+  margin-top: -52px;
 }
 
 .time p {
@@ -401,6 +401,10 @@ cursor: url(../assets/close-x.png), auto !important;
 
 @media screen and (min-width: 64em) {
 
+#warped-mobile {
+  visibility: hidden;
+}
+
 #warped {
   position: relative;
   display: block;
@@ -622,7 +626,23 @@ cursor: url(../assets/close-x.png), auto !important;
 
 }
 
+
 /* MEDIA QUERIES */
+
+/*@media screen and (max-width: 1023px) {
+
+  #warped-mobile {
+  visibility: visible;
+  font-family:Acumin Pro Bold, Helvetica, Arial, sans-serif;
+  font-size:12px;
+  line-height:25px;
+  font-weight: bold;
+  color: #4068FC;
+  margin-top: 100%;
+  }
+
+}*/
+
 
 @media screen and (min-width: 1248px) {
 
@@ -684,7 +704,16 @@ cursor: url(../assets/close-x.png), auto !important;
 
 
 @media screen and (min-width: 40em) and (max-width: 1023px) {
+
 /*  .slick-prev {
+
+
+  .header__nav {
+    margin-right: -2.5%;
+  }
+
+  .slick-prev {
+
     left: -75px !important;
     top: 210px !important;
     width: 100px !important;
@@ -754,7 +783,7 @@ cursor: url(../assets/close-x.png), auto !important;
   .column {
     width: 152% !important;
     margin-left: -25% !important;
-    text-align: center;
+    text-align: left;
   }
 
   .column p, .big-link {
@@ -781,6 +810,60 @@ cursor: url(../assets/close-x.png), auto !important;
 /*  body {
     overflow: hidden;
   }*/
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1079px) {
+  .header__nav {
+    margin-right: 0;
+  }
+
+  .titular p {
+    margin-left: 2%;
+  }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+  .header__nav {
+    float: none;
+    margin-left: 0;
+    margin-bottom: 80px;
+  }
+
+  .titular p{
+    font-size: 28px;
+  }
+
+  .footer .footer__time {
+  -ms-transform: initial;
+  -webkit-transform: initial;
+  transform: initial;
+  margin-left: 0;
+  }
+
+  .footer {
+    margin-top: -1%;
+  }
+
+  #warped-mobile {
+  visibility: visible;
+  font-family:Acumin Pro Bold, Helvetica, Arial, sans-serif;
+  font-size:12px;
+  line-height:25px;
+  font-weight: bold;
+  color: #4068FC;
+  margin-top: 100%;
+  }
+
+  #warped-mobile p {
+    margin-bottom: 0;
+  }
+
+  .connect ul li {
+    display: block;
+  }
 
 }
 
