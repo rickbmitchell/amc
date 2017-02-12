@@ -6,32 +6,8 @@ $(function() {
   var start = (new Date()).getTime();
   startTime();
 
-  // $(".quote-link").click(function(e) {
-  //   e.preventDefault();
-  //   $(this).toggleClass('close');
-  //   $('.quote-block').toggle();
-  // });
-
-  // $('.about-link').click(function() {
-  //   $('body').addClass('about-active');
-  //   $('.home-link').addClass('close');
-  // });
-
-  // $('.home-link').click(function(e) {
-  //   e.preventDefault();
-  //   $(this).removeClass('close');
-  //   $('body').removeClass('about-active');
-  // });
-
   function startTime() {
-    // var today=new Date();
-    // var h=today.getHours();
-    // var m=today.getMinutes();
-    // var s=today.getSeconds();
-    // m = checkTime(m);
-    // s = checkTime(s);
-    // $('.footer__time').html(h + ":" + m + ":" + s);
-    // var t = setTimeout(function(){startTime();},500);
+
 
     var currentTime = (new Date()).getTime();
     var totalTime = currentTime - start;
@@ -68,10 +44,14 @@ $(document).ready(function(){
     centerImage(text);
 
     $('.about').show();
+    $('.slick-prev').hide();
+    $('.slick-next').hide();
 
     $(".about").click(function(){
       $('body').removeClass('about-active');
       $(".about").hide();
+      $('.slick-prev').show();
+      $('.slick-next').show();
     });
 
   });
