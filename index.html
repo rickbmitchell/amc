@@ -34,6 +34,7 @@
 
 <div class="portfolio">
     <section class="single-item slider">
+<div class="slick-list"
       <div><img src="./assets/image1.jpg"></div>
       <div><img src="./assets/image2.jpg"></div>
       <div><img src="./assets/image3.jpg"></div>
@@ -43,7 +44,11 @@
       <div><img src="./assets/image7.jpg"></div>
       <div><img src="./assets/image8.jpg"></div>
       <div><img src="./assets/image9.jpg"></div>
+</div>
+      <button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;"></button>
+            <button type="button" data-role="none" class="slick-next slick-arrow" aria-label="Next" role="button" style="display: block;"></button>
     </section>
+
 <!--     <div class="count-container"> -->
       <div class="slide-count">
          <span class="current"></span> /
@@ -55,34 +60,9 @@
 
 
     <div class="time">
-<!--       <p class="text-one show-for-desktop">Unfortunately, the clock is ticking, the hours</p>
-      <p class="text-two show-for-desktop">are going by. The past increase</p>
-      <p class="text-three show-for-desktop">s, the future receeds. Possibilities decreas</p>
-      <p class="text-four show-for-desktop">ing, regrets mounting. U</p>
-      <p class="text-five show-for-desktop">nfortunately, the clock is ticking, th</p>
-      <p class="text-six show-for-desktop">e hours are going b</p>
-      <p class="text-seven show-for-desktop">y. The past increases, the fu</p>
-      <p class="text-eight show-for-desktop">ture recedes..</p>
-      <p class="text-nine show-for-desktop">.</p>
-      <p class="text-ten show-for-desktop">New work coming soon.</p>
-      <p class="tablet-quote centered show-for-tablet">
-        Unfortunately,<br/>
-        the clock is ticking, the<br/>
-        hours are going by. The past<br/>
-        increases, the future recedes.<br/>
-        Possibilities decreasing,<br/>
-        regrets mounting...
-      </p> -->
+
       <svg id="clock" class="clock" width="300" height="300"></svg>
-<!--       <div class="quote-block">
-        <div class="quote-block__dropshadow"></div>
-        <div class="quote-block__background">
-          Quote used is from Haruki Murakami's 1995 novel <span class="underline">Dance Dance Dance</span>.
-        </div>
-      </div>
-      <p class="text-mobile centered hide-for-desktop">
-        New work coming soon.
-      </p> -->
+
     </div>
 
     <div class="section about">
@@ -125,12 +105,7 @@
     <script src="js/clock.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
     <script src="js/site.js" type="text/javascript"></script>
-<!--     // <script src="js/jquery-1.6.2.min.js"></script>
-
-    // <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    // <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-<!--     // <script src="js/jquery.lettering-0.6.1.min.js"></script> -->
     <script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
 
@@ -144,32 +119,10 @@
         infinite: true,
         fade: true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
         // prevArrow:"<img class='a-left control-c prev slick-prev' src='assets/Left_Arrow.svg'>",
         // nextArrow:"<img class='a-right control-c next slick-next' src='assets/Right_Arrow.svg'>"
       });
-
-    //   $('.portfolio').on('mouseover', function (e) {
-    // if (e.clientY < $('.portfolio').height() / 2) {
-    //     $('.portfolio').show('.slick-prev')
-    // } else {
-    //     $('.portfolio').show('.slick-next')
-    // }
-    // });
-
-      // $gallery.on('mousemove', function(event) {
-      //  var mouseSide;
-      // if ((event.pageX - this.offsetLeft) < $(this).width() / 2) {
-      //   mouseSide = $('.slick-prev');
-      // } else {
-      //   mouseSide = $('.slick-next');
-      // };
-
-      // $gallery.append(mouseSide).css('text-align',( mouseSide=='.slick-prev')?'left':'right');
-      // }).on('mouseout', function(){
-      // $gallery.append('');
-
-      // });
 
 
       $gallery.on('init', function(event, slick){
