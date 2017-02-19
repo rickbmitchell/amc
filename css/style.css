@@ -242,7 +242,7 @@ body.about-active {
   cursor: url(../assets/close-x.png), auto !important;
   position: absolute;
   width: 100%;
-  height: 105%;
+  height: 110%;
   left: 0px;
   top: 0px;
   opacity: .95;
@@ -281,6 +281,11 @@ cursor: url(../assets/close-x.png), auto !important;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.about-centered, .close-about {
+  max-height: 880px;
+  overflow: hidden;
 }
 
 .column {
@@ -394,12 +399,15 @@ cursor: url(../assets/close-x.png), auto !important;
         visibility: hidden;
     }*/
 
-#warped {
+
+@media screen and (max-width: 768px) {
+  #warped {
   display: none;
+  }
+
 }
 
-
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 769px) {
 
 #warped-mobile {
   visibility: hidden;
@@ -626,6 +634,13 @@ cursor: url(../assets/close-x.png), auto !important;
 
 }
 
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+
+  #warped-mobile, #warped {
+    visibility: hidden;
+  }
+
+}
 
 /* MEDIA QUERIES */
 
@@ -661,7 +676,16 @@ cursor: url(../assets/close-x.png), auto !important;
   }
 
   .about {
-    height: 106%;
+    height: 108%;
+  }
+
+
+}
+
+@media screen and (min-width: 40em) and (max-width: 1022px) {
+
+  .about {
+    height: 109%;
   }
 
 
@@ -670,7 +694,7 @@ cursor: url(../assets/close-x.png), auto !important;
 @media screen and (min-width: 1023px) and (max-width: 1247px) {
 
   .about {
-    height: 106%;
+    height: 110%;
   }
 
 
